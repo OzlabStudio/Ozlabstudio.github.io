@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="main.css" />
 </head>
     <div class="wrapper">
+          <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
+
 <body>
     <header id="header" style="display: flex; align-items: center; gap: 20px; padding: 20px;">
         <img src="Logo_OzLab.png" alt="Logo Ozlab" style="height: 60px;" />

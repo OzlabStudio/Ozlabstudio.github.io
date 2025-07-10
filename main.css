@@ -124,11 +124,12 @@ section {
 
 /* Footer */
 footer {
-  background-color: #390a97;
-  color: #ffffff;
-  text-align: center;
-  padding: 1em;
+    background-color: #390a97;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em;
 }
+
 
 /* Detalles en verde pasto */
 .highlight {

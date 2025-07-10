@@ -90,12 +90,13 @@ a:hover {
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  color: #390a97;
+  color: #3fa34d;
   background-color: #fefbe3;
-  border: 2px solid #390a97;
+  border: 2px solid #3fa34d;
   padding: 5px 10px;
   border-radius: 8px;
 }
+
 
 
 /* Responsive nav */

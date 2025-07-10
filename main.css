@@ -1,113 +1,50 @@
-
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&family=Poppins&display=swap');
 
+/* Base */
 body {
-    background-color: #390a97; /* Color de fondo externo */
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+  background-color: #390a97;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .wrapper {
-    max-width: 960px;
-    margin: 40px auto;
-    padding: 40px;
-    background-color: #fefbe3; /* fondo interno tipo hoja */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* sombra para el marco */
-    border-radius: 12px;
-    border: 3px solid #4de211; /* verde para detalles */
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #fefbe3;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  border: 3px solid #4de211;
 }
 
-#nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #fefbe3; /* fondo igual al wrapper para que se vea fluido */
-    padding: 15px 0;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-#nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#nav a {
-    text-decoration: none;
-    font-weight: 600;
-    color: #390a97;
-    font-family: 'Poppins', sans-serif;
-}
-.nav-links a {
-  color: #222222;
-}
-
-.nav-links a:hover {
-  color: #4de211;
-}
-
-#nav a:hover {
-    color: #4de211;
-}
-
-
+/* Textos */
 h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: #390a97;
+  font-family: 'Montserrat', sans-serif;
+  color: #390a97;
 }
 
 p, li {
-    font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  color: #000;
 }
 
 a {
-    color: #4de211;
+  color: #4de211;
+  text-decoration: none;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #fefbe3;
+a:hover {
+  color: #3fa34d;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-section {
-    padding: 2em;
-}
-
-footer {
-    background-color: #390a97;
-    color: #ffffff;
-    text-align: center;
-    padding: 1em;
-}
-
-/* Verde pasto para detalles */
-.highlight {
-    color: #3fa34d;
-}
-/* Navbar sticky */
+/* Navbar Sticky */
 #nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #ffffff;
+  background-color: #fefbe3;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -129,16 +66,16 @@ footer {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Links en desktop */
+/* Links desktop */
 .nav-links {
   display: flex;
   gap: 30px;
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
-  text-decoration: none;
   font-weight: 600;
   color: #222222;
   font-family: 'Poppins', sans-serif;
@@ -156,7 +93,7 @@ footer {
   color: #390a97;
 }
 
-/* Responsive para pantallas pequeñas */
+/* Responsive nav */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -178,4 +115,22 @@ footer {
   .nav-links.show {
     display: flex;
   }
+}
+
+/* Secciones */
+section {
+  padding: 2em;
+}
+
+/* Footer */
+footer {
+  background-color: #390a97;
+  color: #ffffff;
+  text-align: center;
+  padding: 1em;
+}
+
+/* Detalles en verde pasto */
+.highlight {
+  color: #3fa34d;
 }

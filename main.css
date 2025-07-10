@@ -103,7 +103,7 @@ a:hover {
     display: none;
     flex-direction: column;
     gap: 15px;
-    background-color: #ffffff;
+    background-color: #fefbe3; /* Fondo crema */
     position: absolute;
     top: 60px;
     left: 0;
@@ -115,7 +115,16 @@ a:hover {
   .nav-links.show {
     display: flex;
   }
+
+  .nav-links a {
+    color: #390a97 !important; /* Morado oscuro */
+  }
+
+  .nav-links a:hover {
+    color: #4de211 !important; /* Verde limón */
+  }
 }
+
 
 /* Secciones */
 section {

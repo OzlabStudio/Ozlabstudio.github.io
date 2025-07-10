@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html>
-    
+<html lang="es">
 <head>
-    <title>Ozlab Studio</title>
     <meta charset="utf-8" />
+    <title>Ozlab Studio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="main.css" />
-</head>
-    <div class="wrapper">
-          <script>
-    const toggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
+    <script defer>
+      document.addEventListener('DOMContentLoaded', function () {
+        const toggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
 
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
-</body>
-</html>
+        toggle.addEventListener('click', () => {
+          navLinks.classList.toggle('show');
+        });
+      });
+    </script>
+</head>
 
 <body>
+  <div class="wrapper">
+
     <header id="header" style="display: flex; align-items: center; gap: 20px; padding: 20px;">
         <img src="Logo_OzLab.png" alt="Logo Ozlab" style="height: 60px;" />
         <div>
@@ -29,16 +29,17 @@
     </header>
 
     <nav id="nav">
-  <button id="menu-toggle">☰</button>
-  <ul id="nav-links">
-    <li><a href="#about">Nosotros</a></li>
-    <li><a href="#services">Servicios</a></li>
-    <li><a href="#portfolio">Portafolio</a></li>
-    <li><a href="#contact">Contacto</a></li>
-  </ul>
-</nav>
-
-
+      <div class="nav-container">
+        <span class="logo">Ozlab</span>
+        <button id="menu-toggle" class="menu-toggle">☰</button>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="#about">Nosotros</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#portfolio">Portafolio</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <section id="about">
         <h2>¿Quiénes somos?</h2>
@@ -59,26 +60,26 @@
         <p>Aquí irán tus proyectos destacados. Puedes incluir imágenes, descripciones y enlaces.</p>
     </section>
 
-  <section id="contact">
-  <h2>Contáctanos</h2>
-  <iframe data-tally-src="https://tally.so/r/mYBqk5" loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="Tally Form"></iframe>
-</section>
-
+    <section id="contact">
+        <h2>Contáctanos</h2>
+        <iframe data-tally-src="https://tally.so/r/mYBqk5" loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="Tally Form"></iframe>
+    </section>
 
     <footer>
         <p>&copy; Ozlab Studio. Todos los derechos reservados.</p>
     </footer>
-    </div>
-    <script src="https://unpkg.com/scrollreveal"></script>
-<script>
-  ScrollReveal().reveal('section', {
-    delay: 200,
-    duration: 1000,
-    origin: 'bottom',
-    distance: '50px',
-    reset: false
-  });
-</script>
 
+  </div>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal().reveal('section', {
+      delay: 200,
+      duration: 1000,
+      origin: 'bottom',
+      distance: '50px',
+      reset: false
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,58 @@
+
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fefbe3;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #390a97;
+}
+
+p, li {
+    font-family: 'Nunito', sans-serif;
+}
+
+a {
+    color: #4de211;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #390a97;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+section {
+    padding: 2em;
+}
+
+footer {
+    background-color: #390a97;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Verde pasto para detalles */
+.highlight {
+    color: #3fa34d;
+}

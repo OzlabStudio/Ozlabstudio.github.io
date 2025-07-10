@@ -130,7 +130,9 @@ footer {
     padding: 1em;
 }
 
-
+footer p {
+  color: #fefbe3 !important;
+}
 /* Detalles en verde pasto */
 .highlight {
   color: #3fa34d;

@@ -57,51 +57,58 @@
   </div>
 </section>
 
-    <section id="services">
+   <section id="services">
   <h2>¿Qué podemos hacer por tu marca?</h2>
   <p>En Ozlab Studio transformamos ideas en imágenes con propósito. Ya sea que estés empezando o quieras llevar tu presencia digital al próximo nivel, tenemos un plan para ti.</p>
 
-  <div class="service-cards">
-    <div class="service-card">
-      <h3>🟢 Plan Emprende</h3>
-      <p class="price">$35.000 CLP</p>
-      <ul>
-        <li>Diseño de logo básico o 3 posts + revisión de feed</li>
-        <li>Paleta + tipografías sugeridas o asesoría visual</li>
-        <li>3 posts + 1 historia destacada</li>
-        <li>Asesoría inicial (30 min)</li>
-        <li>Entregas en PNG + Canva</li>
-      </ul>
-      <a href="https://wa.me/56946960309?text=Hola%20quiero%20el%20Plan%20Emprende%20de%20Ozlab%20Studio" target="_blank" class="whatsapp-plan-btn">Lo quiero</a>
+  <div class="carousel-wrapper">
+    <button class="carousel-btn left" id="btn-prev">&#10094;</button>
+
+    <div class="carousel-container" id="carousel">
+      <div class="service-card">
+        <h3>🟢 Plan Emprende</h3>
+        <p class="price">$35.000 CLP</p>
+        <ul>
+          <li>Logo básico o 3 posts + revisión de feed</li>
+          <li>Paleta + tipografías o asesoría visual</li>
+          <li>3 posts + 1 historia destacada</li>
+          <li>Asesoría inicial (30 min)</li>
+          <li>Entregas en PNG + Canva</li>
+        </ul>
+        <a href="https://wa.me/56946960309?text=Hola%20quiero%20el%20Plan%20Emprende%20de%20Ozlab%20Studio" target="_blank" class="whatsapp-plan-btn">Lo quiero 💚</a>
+      </div>
+
+      <div class="service-card">
+        <h3>🟣 Plan Impulsa</h3>
+        <p class="price">$60.000 CLP</p>
+        <ul>
+          <li>Logo pro o rediseño ligero</li>
+          <li>Mini manual o pack de historias</li>
+          <li>6 posts + 3 historias</li>
+          <li>Tarjeta o etiqueta</li>
+          <li>Entregas en PNG + PDF + Canva</li>
+        </ul>
+        <a href="https://wa.me/56946960309?text=Hola%20quiero%20el%20Plan%20Impulsa%20de%20Ozlab%20Studio" target="_blank" class="whatsapp-plan-btn">Lo quiero 💜</a>
+      </div>
+
+      <div class="service-card">
+        <h3>💚 Plan Expande</h3>
+        <p class="price">$95.000 CLP</p>
+        <ul>
+          <li>Branding completo o reels</li>
+          <li>Manual visual completo</li>
+          <li>9 posts + 6 historias</li>
+          <li>Empaque + landing</li>
+          <li>Redes + WhatsApp integrados</li>
+        </ul>
+        <a href="https://wa.me/56946960309?text=Hola%20quiero%20el%20Plan%20Expande%20de%20Ozlab%20Studio" target="_blank" class="whatsapp-plan-btn">Lo quiero 💥</a>
+      </div>
     </div>
 
-    <div class="service-card">
-      <h3>🟣 Plan Impulsa</h3>
-      <p class="price">$60.000 CLP</p>
-      <ul>
-        <li>Logo pro (2 versiones) o rediseño / mockups</li>
-        <li>Mini manual o pack de diseños</li>
-        <li>6 posts + 3 historias</li>
-        <li>Diseño de tarjeta o etiqueta</li>
-        <li>Entregas en PNG + PDF + Canva</li>
-      </ul>
-      <a href="https://wa.me/56946960309?text=Hola%20quiero%20el%20Plan%20Impulsa%20de%20Ozlab%20Studio" target="_blank" class="whatsapp-plan-btn">Lo quiero</a>
-    </div>
-
-    <div class="service-card">
-      <h3>💚 Plan Expande</h3>
-      <p class="price">$95.000 CLP</p>
-      <ul>
-        <li>Branding completo o animaciones / presentación</li>
-        <li>Manual visual completo</li>
-        <li>9 posts + 6 historias</li>
-        <li>Etiqueta o empaque + Landing page</li>
-        <li>Redes y WhatsApp conectados + revisión post-lanzamiento</li>
-      </ul>
-      <a href="https://wa.me/56946960309?text=Hola%20quiero%20el%20Plan%20Expande%20de%20Ozlab%20Studio" target="_blank" class="whatsapp-plan-btn">Lo quiero</a>
-    </div>
+    <button class="carousel-btn right" id="btn-next">&#10095;</button>
   </div>
 </section>
+
 
 
     <section id="portfolio">
@@ -188,6 +195,24 @@ window.addEventListener('load', function () {
 });
 
   </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.getElementById('carousel');
+    const btnNext = document.getElementById('btn-next');
+    const btnPrev = document.getElementById('btn-prev');
+
+    const scrollAmount = 320;
+
+    btnNext.addEventListener('click', () => {
+      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    btnPrev.addEventListener('click', () => {
+      carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+  });
+</script>
+
 </body>
 </html>
 

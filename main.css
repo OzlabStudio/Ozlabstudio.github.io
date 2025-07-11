@@ -41,7 +41,7 @@ h1, h2, h3 {
 
 p, li {
   font-family: 'Nunito', sans-serif;
-  color: #390a97;
+  color: #000000;
 }
 
 a {
@@ -91,7 +91,7 @@ a:hover {
 
 .nav-links a {
   font-weight: 600;
-  color: #222222;
+  color: #390a97;
   font-family: 'Poppins', sans-serif;
 }
 

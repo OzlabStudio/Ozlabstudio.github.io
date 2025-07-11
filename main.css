@@ -284,19 +284,25 @@ footer p {
 }
 
 .whatsapp-plan-btn {
-  display: inline-block;
-  padding: 10px 20px;
   background-color: #4de211;
   color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 1em;
   font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
   transition: background-color 0.3s ease;
 }
 
 .whatsapp-plan-btn:hover {
   background-color: #3fa34d;
 }
+
 
 /* Botones de navegación */
 .carousel-btn {
@@ -352,5 +358,27 @@ footer p {
   .whatsapp-plan-btn {
     width: 100%;
     text-align: center;
+  }
+}
+.main-services-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+.main-services-list li::before {
+  content: "🟢 ";
+}
+.carousel-hint-mobile {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #390a97;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .carousel-hint-mobile {
+    display: block;
   }
 }

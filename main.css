@@ -331,3 +331,26 @@ footer p {
     display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .carousel-container {
+    flex-direction: row;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .service-card {
+    flex: 0 0 90%;
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .whatsapp-plan-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

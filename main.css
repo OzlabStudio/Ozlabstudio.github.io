@@ -152,3 +152,10 @@ footer p {
 .highlight {
   color: #3fa34d;
 }
+
+@media (max-width: 768px) {
+  .nav-container img {
+    height: 60px !important; /* Puedes ajustar este valor */
+  }
+}
+

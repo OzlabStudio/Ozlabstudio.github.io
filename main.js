@@ -70,20 +70,21 @@ if (carouselContainer && prevBtn && nextBtn) {
     carouselContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
   });
 }
-// Botón Volver Arriba
-const backToTop = document.getElementById('back-to-top');
 
-window.addEventListener('scroll', () => {
+// Mostrar botón de volver arriba cuando se hace scroll
+window.addEventListener("scroll", function () {
+  const backToTopBtn = document.getElementById("back-to-top");
   if (window.scrollY > 300) {
-    backToTop.classList.add('show');
+    backToTopBtn.classList.add("show");
   } else {
-    backToTop.classList.remove('show');
+    backToTopBtn.classList.remove("show");
   }
 });
 
-backToTop.addEventListener('click', () => {
+// Acción al hacer clic
+document.getElementById("back-to-top").addEventListener("click", function () {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth'
+    behavior: "smooth"
   });
 });

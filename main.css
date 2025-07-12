@@ -366,6 +366,7 @@ footer {
 }
 
 /* Contenedor común para ambos botones */
+/* Contenedor de botones flotantes */
 .floating-buttons {
   position: fixed;
   bottom: 20px;
@@ -373,11 +374,33 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
   z-index: 1000;
 }
 
-/* Botón Volver Arriba */
+/* Botón de WhatsApp */
+.whatsapp-button {
+  background-color: #25D366;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Botón volver arriba */
 #back-to-top {
   background-color: rgba(57, 10, 151, 0.9);
   color: #fefbe3;
@@ -385,12 +408,12 @@ footer {
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 #back-to-top:hover {
@@ -401,27 +424,4 @@ footer {
 #back-to-top.show {
   opacity: 1;
   pointer-events: auto;
-}
-
-/* Botón WhatsApp */
-.whatsapp-button {
-  background-color: #25D366;
-  border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-  width: 48px;
-  height: 48px;
-}
-
-.whatsapp-button:hover {
-  transform: scale(1.1);
-}
-
-.whatsapp-icon {
-  width: 24px;
-  height: 24px;
 }

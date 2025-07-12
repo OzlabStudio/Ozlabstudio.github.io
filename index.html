@@ -74,14 +74,19 @@
   <h3 style="text-align: center; margin-top: 2em;">Planes</h3>
 </section>
 
-  <div class="carousel-wrapper">
-    <div class="carousel-hint-mobile">
-  <span>⬅️ Desliza ➡️</span>
-</div>
-    <button class="carousel-btn left" id="btn-prev">&#10094;</button>
+  <<!-- Solo muestro la parte modificada -->
+<div class="carousel-wrapper">
+  <!-- Hint visible SOLO en móvil -->
+  <div class="carousel-hint-mobile">
+    <span>⬅️ Desliza ➡️</span>
+  </div>
 
-    <div class="carousel-container" id="carousel">
-      <div class="service-card">
+  <!-- Botones funcionales solo para escritorio -->
+  <button class="carousel-btn left" id="carousel-prev">&#10094;</button>
+
+  <div class="carousel-container" id="carousel">
+    <!-- Planes aquí se mantienen igual... -->
+    <div class="service-card">
         <h3>🟢 Plan Emprende</h3>
         <p class="price">$35.000 CLP</p>
         <ul>
@@ -121,8 +126,10 @@
       </div>
     </div>
 
-    <button class="carousel-btn right" id="btn-next">&#10095;</button>
   </div>
+
+  <button class="carousel-btn right" id="carousel-next">&#10095;</button>
+</div>
 </section>
 
 
@@ -204,35 +211,44 @@
       });
     });
     // Preloader hide on load
-window.addEventListener('load', function () {
-  const preloader = document.getElementById('preloader');
-  preloader.style.opacity = '0';
-  preloader.style.visibility = 'hidden';
-});
-const carouselContainer = document.querySelector('.carousel-container');
-const prevBtn = document.getElementById('carousel-prev');
-const nextBtn = document.getElementById('carousel-next');
+<!-- Carrusel funcional con bucle e IDs corregidos -->
 
-let scrollAmount = 0;
-const scrollStep = 320;
+  // ... ScrollReveal, menú hamburguesa, scroll suave...
 
-nextBtn.addEventListener('click', () => {
-  if (scrollAmount >= carouselContainer.scrollWidth - carouselContainer.clientWidth) {
-    scrollAmount = 0;
-  } else {
-    scrollAmount += scrollStep;
-  }
-  carouselContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-});
+  // Preloader hide on load
+  window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    preloader.style.opacity = '0';
+    preloader.style.visibility = 'hidden';
+  });
 
-prevBtn.addEventListener('click', () => {
-  if (scrollAmount <= 0) {
-    scrollAmount = carouselContainer.scrollWidth - carouselContainer.clientWidth;
-  } else {
-    scrollAmount -= scrollStep;
-  }
-  carouselContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-});
+  // Carrusel funcional y con bucle
+  const carouselContainer = document.getElementById('carousel');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+
+  let scrollAmount = 0;
+  const scrollStep = 320;
+
+  nextBtn.addEventListener('click', () => {
+    if (scrollAmount >= carouselContainer.scrollWidth - carouselContainer.clientWidth) {
+      scrollAmount = 0;
+    } else {
+      scrollAmount += scrollStep;
+    }
+    carouselContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (scrollAmount <= 0) {
+      scrollAmount = carouselContainer.scrollWidth - carouselContainer.clientWidth;
+    } else {
+      scrollAmount -= scrollStep;
+    }
+    carouselContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+
 
   </script>
   

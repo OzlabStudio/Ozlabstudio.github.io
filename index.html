@@ -6,24 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="main.css" />
   <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    /* Hover efecto para el icono flotante */
+    .whatsapp-icon:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 
 <body>
   <!-- Preloader -->
-<div id="preloader">
-  <div class="loader">
-    <img src="Logo_ozLab_h.png" alt="Cargando Ozlab..." />
-    <p>Cargando creatividad...</p>
+  <div id="preloader">
+    <div class="loader">
+      <img src="Logo_ozLab_h.png" alt="Cargando Ozlab..." />
+      <p>Cargando creatividad...</p>
+    </div>
   </div>
-</div>
 
   <div class="wrapper">
-
     <!-- NAVBAR -->
     <nav id="nav">
       <div class="nav-container">
         <img src="Logo_OzLab.png" alt="Logo Ozlab" style="height: 60px;" />
-        <button id="menu-toggle" class="menu-toggle">☰</button>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Mostrar menú">☰</button>
         <ul id="nav-links" class="nav-links">
           <li><a href="#about">Nosotros</a></li>
           <li><a href="#services">Servicios</a></li>
@@ -35,112 +40,113 @@
 
     <!-- BANNER -->
     <div class="banner">
-      <img src="banner_ozlab.png" alt="Banner Ozlab Studio" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="banner_ozlab.png" alt="Banner Ozlab Studio"
+           style="width: 100%; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     </div>
 
-    <!-- SECCIONES -->
-    <section id="about" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
-  <div style="flex: 1; min-width: 280px;">
-    
-     <h2>¿Quiénes somos?</h2>
-      <p>Ozlab Studio es un laboratorio creativo donde las ideas se transforman en experiencias visuales.</p>
-      <p>Aquí mezclamos diseño, estrategia y ese toque que no se aprende: un poquito de cariño en cada trabajo.</p>
-      <p>Nos especializamos en crear marcas con carácter, diseños que conectan y contenido digital que deja huella.</p>
-      <p>Trabajamos con corazón, café y mucha actitud.</p>
-      <p></p>
-      <p>Si quieres algo que se vea bien pero también diga algo...</p>
-      <p>¡Estás en el lugar correcto!</p>
-  </div>
-
-  <div style="flex: 1; min-width: 280px; text-align: center;">
-    <img src="nosotros_ozlab.jpg" alt="Ozlab ilustración equipo" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-  </div>
-</section>
-
-   <section id="services">
-  <h2>¿Qué podemos hacer por tu marca?</h2>
-  <p>En Ozlab Studio transformamos ideas en imágenes con propósito. 
-    Ya sea que estés empezando o quieras llevar tu presencia digital al próximo nivel, tenemos un plan para ti.</p>
-  <p>En Ozlab Studio te ofrecemos soluciones creativas y funcionales para potenciar tu marca.</p>
-
-  <ul class="main-services-list">
-    <li>Identidad visual y branding</li>
-    <li>Diseño gráfico publicitario y editorial</li>
-    <li>Gestión de redes sociales</li>
-    <li>Diseño de contenido digital</li>
-    <li>Desarrollo de landing pages</li>
-  </ul>
-
-  <h3 style="text-align: center; margin-top: 2em;">Planes</h3>
-</section>
-
-  <<!-- Solo muestro la parte modificada -->
-<div class="carousel-wrapper">
-  <!-- Hint visible SOLO en móvil -->
-  <div class="carousel-hint-mobile">
-    <span>⬅️ Desliza ➡️</span>
-  </div>
-
-  <!-- Botones funcionales solo para escritorio -->
-  <button class="carousel-btn left" id="carousel-prev">&#10094;</button>
-
-  <div class="carousel-container" id="carousel">
-    <!-- Planes aquí se mantienen igual... -->
-    <div class="service-card">
-        <h3>🟢 Plan Emprende</h3>
-        <p class="price">$35.000 CLP</p>
-        <ul>
-          <li>Logo básico o 3 posts + revisión de feed</li>
-          <li>Paleta + tipografías o asesoría visual</li>
-          <li>3 posts + 1 historia destacada</li>
-          <li>Asesoría inicial (30 min)</li>
-          <li>Entregas en PNG + Canva</li>
-        </ul>
-        <a href="https://wa.me/56946960309?text=Hola%20quiero%20el%20Plan%20Emprende%20de%20Ozlab%20Studio" target="_blank" class="whatsapp-plan-btn">Lo quiero 💚</a>
+    <!-- SECCIÓN ABOUT -->
+    <section id="about" class="section-flex">
+      <div class="about-text">
+        <h2>¿Quiénes somos?</h2>
+        <p>Ozlab Studio es un laboratorio creativo donde las ideas se transforman en experiencias visuales.</p>
+        <p>Aquí mezclamos diseño, estrategia y ese toque que no se aprende: un poquito de cariño en cada trabajo.</p>
+        <p>Nos especializamos en crear marcas con carácter, diseños que conectan y contenido digital que deja huella.</p>
+        <p>Trabajamos con corazón, café y mucha actitud.</p>
+        <p>Si quieres algo que se vea bien pero también diga algo...</p>
+        <p>¡Estás en el lugar correcto!</p>
       </div>
-
-      <div class="service-card">
-        <h3>🟣 Plan Impulsa</h3>
-        <p class="price">$60.000 CLP</p>
-        <ul>
-          <li>Logo pro o rediseño ligero</li>
-          <li>Mini manual o pack de historias</li>
-          <li>6 posts + 3 historias</li>
-          <li>Tarjeta o etiqueta</li>
-          <li>Entregas en PNG + PDF + Canva</li>
-        </ul>
-        <a href="https://wa.me/56946960309?text=Hola%20quiero%20el%20Plan%20Impulsa%20de%20Ozlab%20Studio" target="_blank" class="whatsapp-plan-btn">Lo quiero 💜</a>
+      <div class="about-image">
+        <img src="nosotros_ozlab.jpg" alt="Ozlab ilustración equipo">
       </div>
+    </section>
 
-      <div class="service-card">
-        <h3>💚 Plan Expande</h3>
-        <p class="price">$95.000 CLP</p>
-        <ul>
-          <li>Branding completo o reels</li>
-          <li>Manual visual completo</li>
-          <li>9 posts + 6 historias</li>
-          <li>Empaque + landing</li>
-          <li>Redes + WhatsApp integrados</li>
-        </ul>
-        <a href="https://wa.me/56946960309?text=Hola%20quiero%20el%20Plan%20Expande%20de%20Ozlab%20Studio" target="_blank" class="whatsapp-plan-btn">Lo quiero 💥</a>
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="services">
+      <h2>¿Qué podemos hacer por tu marca?</h2>
+      <p>En Ozlab Studio transformamos ideas en imágenes con propósito.</p>
+         <p>Ya sea que estés empezando o quieras llevar tu presencia digital al próximo nivel, tenemos un plan para ti.</p>
+      <p>Te ofrecemos soluciones creativas y funcionales para potenciar tu marca.</p>
+
+      <ul class="main-services-list">
+        <li>Identidad visual y branding</li>
+        <li>Diseño gráfico publicitario y editorial</li>
+        <li>Gestión de redes sociales</li>
+        <li>Diseño de contenido digital</li>
+        <li>Desarrollo de landing pages</li>
+      </ul>
+
+      <h3 class="plans-title">Planes</h3>
+
+      <!-- Carrusel de planes -->
+      <div class="carousel-wrapper">
+        <div class="carousel-hint-mobile"><span>⬅️ Desliza ➡️</span></div>
+
+        <button class="carousel-btn left" id="carousel-prev" aria-label="Ver plan anterior">
+          &#10094;
+        </button>
+
+        <div class="carousel-container" id="carousel">
+          <!-- Plan Emprende -->
+          <div class="service-card">
+            <h3>🟢 Plan Emprende</h3>
+            <p class="price">$35.000 CLP</p>
+            <ul>
+              <li>Logo básico o 3 posts + revisión de feed</li>
+              <li>Paleta + tipografías o asesoría visual</li>
+              <li>3 posts + 1 historia destacada</li>
+              <li>Asesoría inicial (30 min)</li>
+              <li>Entregas en PNG + Canva</li>
+            </ul>
+            <a href="https://wa.me/56946960309?text=Hola%20quiero%20el%20Plan%20Emprende%20de%20Ozlab%20Studio"
+               target="_blank" class="whatsapp-plan-btn">Lo quiero 💚</a>
+          </div>
+
+          <!-- Plan Impulsa -->
+          <div class="service-card">
+            <h3>🟣 Plan Impulsa</h3>
+            <p class="price">$60.000 CLP</p>
+            <ul>
+              <li>Logo pro o rediseño ligero</li>
+              <li>Mini manual o pack de historias</li>
+              <li>6 posts + 3 historias</li>
+              <li>Tarjeta o etiqueta</li>
+              <li>Entregas en PNG + PDF + Canva</li>
+            </ul>
+            <a href="https://wa.me/56946960309?text=Hola%20quiero%20el%20Plan%20Impulsa%20de%20Ozlab%20Studio"
+               target="_blank" class="whatsapp-plan-btn">Lo quiero 💜</a>
+          </div>
+
+          <!-- Plan Expande -->
+          <div class="service-card">
+            <h3>💚 Plan Expande</h3>
+            <p class="price">$95.000 CLP</p>
+            <ul>
+              <li>Branding completo o reels</li>
+              <li>Manual visual completo</li>
+              <li>9 posts + 6 historias</li>
+              <li>Empaque + landing</li>
+              <li>Redes + WhatsApp integrados</li>
+            </ul>
+            <a href="https://wa.me/56946960309?text=Hola%20quiero%20el%20Plan%20Expande%20de%20Ozlab%20Studio"
+               target="_blank" class="whatsapp-plan-btn">Lo quiero 💥</a>
+          </div>
+        </div>
+
+        <button class="carousel-btn right" id="carousel-next" aria-label="Ver siguiente plan">
+          &#10095;
+        </button>
       </div>
-    </div>
+    </section>
 
-  </div>
-
-  <button class="carousel-btn right" id="carousel-next">&#10095;</button>
-</div>
-</section>
-
-
-
+    <!-- SECCIÓN PORTAFOLIO (sin cambios) -->
     <section id="portfolio">
       <h2>Portafolio</h2>
       <p>Aquí irán tus proyectos destacados. Puedes incluir imágenes, descripciones y enlaces.</p>
     </section>
 
+    <!-- SECCIÓN CONTACTO (sin cambios) -->
     <section id="contact">
-      <h2></h2>
+      <h2>¿Hablamos?</h2>
       <iframe
         src="https://tally.so/r/mYBqk5?transparentBackground=1"
         loading="lazy"
@@ -156,77 +162,68 @@
 
     <!-- FOOTER -->
     <footer>
-      <p style="color: #fefbe3;">&copy; Ozlab Studio. Todos los derechos reservados.</p>
+      <p>&copy; Ozlab Studio. Todos los derechos reservados.</p>
     </footer>
   </div>
 
-  <!-- BOTÓN WHATSAPP -->
+  <!-- BOTÓN WHATSAPP FLOTANTE -->
   <a href="https://wa.me/56946960309" class="whatsapp-button" target="_blank" title="Escríbenos por WhatsApp">
     <img src="Whatsapp_icon.png" alt="WhatsApp" class="whatsapp-icon" />
   </a>
 
-  <!-- SCRIPTS -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Animaciones al hacer scroll
-      ScrollReveal().reveal('section', {
-        delay: 200,
-        duration: 1000,
-        origin: 'bottom',
-        distance: '50px',
-        reset: false
-      });
+<!-- Librería ScrollReveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
 
-      // Menú hamburguesa
-      const toggle = document.getElementById('menu-toggle');
-      const navLinks = document.getElementById('nav-links');
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Animaciones al hacer scroll
+    ScrollReveal().reveal('section', {
+      delay: 200,
+      duration: 1000,
+      origin: 'bottom',
+      distance: '50px',
+      reset: false
+    });
 
-      toggle.addEventListener('click', function (e) {
-        e.stopPropagation();
-        navLinks.classList.toggle('show');
-      });
+    // Menú hamburguesa
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', e => {
+      e.stopPropagation();
+      navLinks.classList.toggle('show');
+    });
+    document.querySelectorAll('#nav-links a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('show'));
+    });
+    document.addEventListener('click', e => {
+      if (!navLinks.contains(e.target) && !toggle.contains(e.target)) {
+        navLinks.classList.remove('show');
+      }
+    });
 
-      document.querySelectorAll('#nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('show');
-        });
-      });
-
-      document.addEventListener('click', function (e) {
-        if (!navLinks.contains(e.target) && !toggle.contains(e.target)) {
-          navLinks.classList.remove('show');
+    // Scroll suave para anclas internas
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
         }
       });
-
-      // Scroll suave
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-      });
     });
-    // Preloader hide on load
-<!-- Carrusel funcional con bucle e IDs corregidos -->
+  });
 
-  // ... ScrollReveal, menú hamburguesa, scroll suave...
-
-  // Preloader hide on load
+  // Ocultar preloader al cargar la página
   window.addEventListener('load', function () {
     const preloader = document.getElementById('preloader');
     preloader.style.opacity = '0';
     preloader.style.visibility = 'hidden';
   });
 
-  // Carrusel funcional y con bucle
+  // Lógica del carrusel de planes
   const carouselContainer = document.getElementById('carousel');
   const prevBtn = document.getElementById('carousel-prev');
   const nextBtn = document.getElementById('carousel-next');
-
   let scrollAmount = 0;
   const scrollStep = 320;
 
@@ -247,12 +244,6 @@
     }
     carouselContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
   });
-
-
-
-  </script>
-  
-
+</script>
 </body>
 </html>
-

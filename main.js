@@ -42,3 +42,31 @@ window.addEventListener('load', function () {
     preloader.remove();
   }, 600);
 });
+
+// CARRUSEL DE PLANES (si existiera)
+const carouselContainer = document.querySelector('.carousel-container');
+const prevBtn = document.getElementById('btn-prev');
+const nextBtn = document.getElementById('btn-next');
+
+if (carouselContainer && prevBtn && nextBtn) {
+  let scrollAmount = 0;
+  const scrollStep = 320;
+
+  nextBtn.addEventListener('click', () => {
+    if (scrollAmount >= carouselContainer.scrollWidth - carouselContainer.clientWidth) {
+      scrollAmount = 0;
+    } else {
+      scrollAmount += scrollStep;
+    }
+    carouselContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (scrollAmount <= 0) {
+      scrollAmount = carouselContainer.scrollWidth - carouselContainer.clientWidth;
+    } else {
+      scrollAmount -= scrollStep;
+    }
+    carouselContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+  });
+}

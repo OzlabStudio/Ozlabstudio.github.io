@@ -390,3 +390,31 @@ footer {
   height: 32px;
 }
 
+#back-to-top {
+  position: fixed;
+  bottom: 90px; /* Arriba del botón de WhatsApp */
+  right: 20px;
+  z-index: 999;
+  background-color: rgba(57, 10, 151, 0.9); /* Morado oscuro semitransparente */
+  color: #fefbe3;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#back-to-top:hover {
+  background-color: #4de211;
+  transform: scale(1.1);
+}
+
+#back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}

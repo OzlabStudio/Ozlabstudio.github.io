@@ -396,6 +396,12 @@ footer {
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
+@media (max-width: 768px) {
+  .floating-buttons .cta-text {
+    display: none;
+  }
+}
+
 #back-to-top {
   display: none;
 }

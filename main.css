@@ -184,8 +184,8 @@ footer {
 }
 
 .preloader-img {
-  width: 250px;
-  max-width: 80%;
+  width: 350px;
+  max-width: 100%;
   margin-bottom: 20px;
   animation: bounce 1.5s infinite;
 }

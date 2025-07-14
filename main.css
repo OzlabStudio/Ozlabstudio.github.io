@@ -418,17 +418,28 @@ footer {
 
 .floating-buttons .whatsapp-button {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
   background-color: transparent;
   text-decoration: none;
 }
 
 .floating-buttons .cta-text {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: #25d366;
   font-family: 'Poppins', sans-serif;
+  margin-top: 5px;
+  animation: bounceText 2s infinite;
+}
+
+@keyframes bounceText {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 .floating-buttons .whatsapp-icon {

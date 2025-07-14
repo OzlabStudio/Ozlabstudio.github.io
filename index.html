@@ -180,30 +180,59 @@
     </section>
 
     <!-- PORTAFOLIO -->
-    <section id="portfolio">
+   <section id="portfolio">
   <h2>Portafolio</h2>
-  <p>Mira algunos de nuestros proyectos recientes…</p>
+  <p>Algunos de nuestros proyectos destacados:</p>
 
   <div class="portfolio-grid">
-    <div class="portfolio-item">
+    <div class="portfolio-item" onclick="openModal('proyecto1')">
       <img src="proyecto1.jpg" alt="Proyecto 1">
-      <div class="portfolio-info">
-        <h3>Marca X</h3>
-        <p>Identidad Visual</p>
-      </div>
+      <p>Proyecto 1</p>
     </div>
-
-    <div class="portfolio-item">
+    <div class="portfolio-item" onclick="openModal('proyecto2')">
       <img src="proyecto2.jpg" alt="Proyecto 2">
-      <div class="portfolio-info">
-        <h3>Landing Z</h3>
-        <p>Web + Biolink</p>
-      </div>
+      <p>Proyecto 2</p>
     </div>
-
-    <!-- Más items aquí -->
+    <div class="portfolio-item" onclick="openModal('proyecto3')">
+      <img src="proyecto3.jpg" alt="Proyecto 3">
+      <p>Proyecto 3</p>
+    </div>
+    <!-- Agrega más proyectos aquí -->
   </div>
+
+  <!-- Modales -->
+  <div id="proyecto1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('proyecto1')">&times;</span>
+      <h3>Proyecto 1</h3>
+      <img src="proyecto1.jpg" alt="Proyecto 1" style="max-width:100%;">
+      <p>Descripción breve del proyecto y su objetivo.</p>
+      <blockquote>"¡Quedamos encantados con el resultado!" — Cliente feliz</blockquote>
+    </div>
+  </div>
+
+  <div id="proyecto2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('proyecto2')">&times;</span>
+      <h3>Proyecto 2</h3>
+      <img src="proyecto2.jpg" alt="Proyecto 2" style="max-width:100%;">
+      <p>Breve descripción.</p>
+      <blockquote>"Excelente trabajo y atención." — Cliente</blockquote>
+    </div>
+  </div>
+
+  <div id="proyecto3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('proyecto3')">&times;</span>
+      <h3>Proyecto 3</h3>
+      <img src="proyecto3.jpg" alt="Proyecto 3" style="max-width:100%;">
+      <p>Otro proyecto destacado.</p>
+      <blockquote>"Súper recomendados." — Cliente</blockquote>
+    </div>
+  </div>
+
 </section>
+
 
 
     <!-- CONTACTO -->

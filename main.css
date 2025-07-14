@@ -415,3 +415,25 @@ footer {
   font-size: 1.8em;
   margin-bottom: 1em;
 }
+
+.floating-buttons .whatsapp-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.floating-buttons .cta-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #25d366;
+  font-family: 'Poppins', sans-serif;
+}
+
+.floating-buttons .whatsapp-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}

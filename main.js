@@ -106,3 +106,16 @@ window.onclick = function(event) {
     }
   });
 }
+
+const headers = document.querySelectorAll('h2');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-stroke');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+headers.forEach(h2 => observer.observe(h2));

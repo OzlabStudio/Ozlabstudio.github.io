@@ -535,12 +535,20 @@ footer {
 }
 
 h2 {
-  font-size: 2.5em; /* Aumenta el tamaño */
+  font-size: 2.5em;
   color: transparent;
   -webkit-text-stroke: 1px #390a97;
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+h2.animate-stroke {
   animation: strokeReveal 1.5s forwards;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @keyframes strokeReveal {
